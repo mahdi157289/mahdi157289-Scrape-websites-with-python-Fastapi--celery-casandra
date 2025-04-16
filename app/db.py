@@ -33,9 +33,9 @@ def get_session():
     return session
 
 # verification of connection to Astra DB
-session = get_session()
-row = session.execute("select release_version from system.local").one()
-if row:
-    print(row[0])
-else:
-    print("An error occurred.")
+#session = get_session()
+#row = session.execute("select release_version from system.local").one()
+#if row:
+#    print(row[0])
+#else:
+#    print("An error occurred.")
