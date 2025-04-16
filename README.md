@@ -35,3 +35,6 @@ Below is a preflight checklist to ensure you system is fully setup to work with 
 - [] Setup an account with DataStax
 - [] Create your first AstraDB and get API credentials
 - [] Use `cassandra-driver` to verify your connection to AstraDB
+### Virtual env
+ python -m venv v
+ v/Scripts/Activate
