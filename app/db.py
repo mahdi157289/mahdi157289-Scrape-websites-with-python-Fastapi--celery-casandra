@@ -6,12 +6,15 @@ import json
 #best practices for security and configuration management
 import pathlib
 import os
-from dotenv import load_dotenv
 
-# load environment variables from .env file
-load_dotenv()
-ASTRA_DB_CLIENT_ID = os.getenv("ASTRA_DB_CLIENT_ID")
-ASTRA_DB_CLIENT_SECRET = os.getenv("ASTRA_DB_CLIENT_SECRET")
+from . import config
+
+
+settings = config.get_settings()
+
+
+ASTRA_DB_CLIENT_ID = settings.astra_db_client_id
+ASTRA_DB_CLIENT_SECRET = settings.astra_db_client_secret
 BASE_DIR = pathlib.Path(__file__).parent
 CLUSTER_BUNDLE = str( BASE_DIR /  "ignored" / 'connect.zip')
 
