@@ -13,7 +13,7 @@ class Settings(BaseSettings):
     proj_name: str = Field("FASTAPIAstraDB", alias="PROJ_Name")
     # Set your ngrok authtoken early on. It's best practice to get this from an environment variable.
     ngrok_authtoken : str = Field(..., alias="YOUR_NGROK_AUTHTOKEN")
-    
+    redis_url: str = Field(..., alias="REDIS_URL")
     model_config = SettingsConfigDict(
         env_file=".env",
         env_file_encoding="utf-8",

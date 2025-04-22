@@ -26,6 +26,7 @@ async def lifespan(app: FastAPI):
     # Optionally, open a tunnel automatically on startup:
     public_url = ngrok.connect(8000)
     print("ngrok tunnel available at:", public_url)
+    
     yield
     session.close()
     # Optionally, kill the ngrok tunnel when closing:
