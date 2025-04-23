@@ -6,7 +6,7 @@ import json
 #best practices for security and configuration management
 import pathlib
 import os
-
+from dotenv import load_dotenv
 from . import config
 
 
